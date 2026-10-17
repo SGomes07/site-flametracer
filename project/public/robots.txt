@@ -1,6 +1,3 @@
-User-agent: *
-Allow: /
-
 # bloquear bots de IA (treino + search)
 User-agent: GPTBot
 User-agent: OAI-SearchBot
