@@ -77,7 +77,7 @@
 
   .about-content {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Texto (60%) à esquerda, imagens (40%) à direita */
+    grid-template-columns: 1.2fr 0.8fr;
     gap: var(--space-5);
     align-items: center;
     position: relative;
@@ -141,12 +141,17 @@
 
   .team-image {
     width: 50%;
-    height: auto;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
     border-radius: var(--border-radius-lg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     transform: perspective(1000px) rotateY(-5deg);
     transition: transform var(--transition-medium);
+  }
+
+  /* Ajusta o foco da foto da esquerda para cortar a parede */
+  .team-image:first-child {
+    object-position: 12% 35%;
   }
 
   .about-image:hover .team-image {
@@ -155,12 +160,12 @@
 
   @media (max-width: 992px) {
     .about-content {
-      grid-template-columns: 1fr; /* Uma única coluna em telas menores */
+      grid-template-columns: 1fr;
       gap: var(--space-4);
     }
 
     .about-image {
-      order: 2; /* Imagens vão para baixo do texto */
+      order: 2;
     }
 
     .image-container {
