@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
 
 # bloquear bots de IA (treino + search)
 User-agent: GPTBot
